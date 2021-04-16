@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="resources/css/style.css" type="text/CSS" rel="stylesheet">
+  </head>
+  
+  <!-- Log in -->
+  <form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="resources/images/Icon.png" style="width: 20%">
+    </div>
+    <div class="name"><p><b>Task Manager</b></p></div>
+
+    <div class="greeting"><p><b>Sign In</b></p></div>
+    <div class="greeting2"><p>Hi there! Nice to see you again.</p></div>
+  
+    <div class="container">
+
+      <form>
+
+        <div class="group">
+          <label for="uname"><b>Email</b></label>
+          <input type="text" placeholder="example@email.com" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+        </div>
+
+        <div class="group">
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="password" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+        </div>
+
+      </form>
+
+      <form method="GET" action="main.html">
+      <button type="submit" class="sibtn"><b>Sign In</b></button>
+      <div class="rmbme"><label><input type="checkbox" checked="checked" name="remember"> Remember me</label></div>
+      </form>
+
+    </div>
+  </form>
+
+
+  </main>
+
+   <footer>
+      <div><button type="button" class="fgtbtn"><p style="color:grey">Forgot Password?</p></button></div>
+      <div class="links">
+      <p><button type="button" class="signupbtn">Sign Up</button></p>
+      </div>
+   </footer>
+  </body>
+</html>

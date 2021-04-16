@@ -1,0 +1,39 @@
+/* All */
+  
+  /*main*/
+/* cards */
+
+.card1{
+  font-size:large;
+  text-align: center;
+  background-color: #92e4fb;
+  margin: 20px;
+}
+
+.card2{
+  font-size:large;
+  text-align: center;
+  background-color: #fefac0;
+  margin: 20px;
+}
+
+.card3{
+  font-size:large;
+  text-align: center;
+  background-color: #dacafb;
+  margin: 20px;
+}
+
+.card4{
+  font-size:large;
+  text-align: center;
+  background-color: #cce8ba;
+  margin: 20px;
+}
+
+.card5{
+  font-size:large;
+  text-align: center;
+  background-color: #a8aaa7;
+  margin: 20px;
+}
