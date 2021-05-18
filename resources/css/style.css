@@ -1,4 +1,5 @@
 /* All */
+
 body {
     background-color: #ffffff;
     font-family: 'Open Sans', sans-serif;
@@ -9,195 +10,271 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-  }
-  
-  footer {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+footer {
     padding: 1rem 1.5rem;
     position: relative;
     top: 4rem;
     display: flex;
     flex-direction: row;
     border-top: 1px solid #d8d8d8;
-  }
-  
-  /*log in*/
+}
+
+#error {
+    display: flex;
+}
+
+
+/*log in*/
+
+
 /* Bordered form */
 
-.name {
-  font-size:large;
-  text-align: center;
-  color: gray;
+.username {
+    font-size: large;
+    text-align: center;
+    color: gray;
 }
 
 .greeting {
-  font-style: bold;
-  font-size: x-large;
-  margin-top: 100px;
-  margin-left: 40px;
+    font-style: bold;
+    font-size: x-large;
+    text-align: center;
 }
 
 .greeting2 {
-  font-size: medium;
-  margin-top: 30px;
-  margin-left: 40px;
-  color:gray;
+    font-size: medium;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: 60px;
+    color: gray;
+    text-align: center;
 }
 
-form {
-  border: none;
-}
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 10px 3px;
-  margin: 10px 0;
-  display: inline-block;
-  border: 0;
-  outline: none;
-  border-bottom:1px solid #757575;
-  box-sizing: border-box;
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 10px 3px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #757575;
+    box-sizing: border-box;
 }
+
 
 /* Set a style for all buttons */
+
 .sibtn {
-  border-radius: 5px;
-  background-color: #ff8351;
-  color: white;
-  padding: 14px 40px;
-  margin: 10px 0;
-  border: 0;
-  cursor: pointer;
-  width: 100%;
+    border-radius: 5px;
+    background-color: #ff8351;
+    color: white;
+    padding: 14px 40px;
+    margin: 10px 0;
+    border: 0;
+    cursor: pointer;
+    width: 100%;
 }
+
 
 /* Add a hover effect for buttons */
+
 button:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
+
 /* Extra style for the cancel button (red) */
+
 .fgtbtn {
-  outline: none;
-  border: 0;
-  width: auto;
-  padding: 10px 18px;
-  background-color: transparent;
-  cursor: help;
+    outline: none;
+    border: 0;
+    width: auto;
+    padding: 10px 18px;
+    background-color: transparent;
+    cursor: help;
 }
 
 .signupbtn {
-  border: 0;
-  outline: none;
-  font-weight: bold;
-  width: auto;
-  padding: 10px 18px;
-  background-color: transparent;
-  color: tomato;
-  cursor: pointer;
+    border: 0;
+    outline: none;
+    font-weight: bold;
+    width: auto;
+    padding: 10px 18px;
+    background-color: transparent;
+    color: tomato;
+    cursor: pointer;
 }
+
 
 /* Center the avatar image inside this container */
+
 .imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
+    text-align: center;
+    margin: 24px 0 12px 0;
 }
+
 
 /* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
 
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
 
 
 /* Add padding to containers */
+
 .container {
-  caret-color: tomato;
-  padding: 40px;
+    color: tomato;
+    padding: 40px;
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #ffffff;
 }
 
 .group {
-  color:tomato;
-  margin-bottom: 1rem;
+    color: tomato;
+    margin-bottom: 1rem;
 }
-
 
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
-.bar:before, .bar:after 	{
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:tomato; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
-.bar:before {
-  left:50%;
-}
-.bar:after {
-  right:50%; 
+
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
 }
 
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: tomato;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+
+input:focus~.bar:before,
+input:focus~.bar:after {
+    width: 50%;
+}
+
+
+/* Sign Up */
+
+.form--hidden {
+    display: none;
+}
+
+.form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
 }
 
 
 /* ANIMATIONS ================ */
+
 @-webkit-keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-	from { background:#5264AE; }
-  to 	{ width:0; background:transparent; }
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
 }
 
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
 
 .rmbme {
-  color:rgb(107, 107, 107);
+    color: rgb(107, 107, 107);
 }
+
 
 /* The "Forgot password" text */
+
 span.psw {
-  float: right;
-  padding-top: 16px;
+    float: right;
+    padding-top: 16px;
 }
+
 
 /* Change styles for span and cancel button on extra small screens */
+
 @media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-
-
+    span.psw {
+        display: block;
+        float: none;
+    }
 }
 
-    /* Footer */
-    footer {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      border: none;
-    }
 
-    .forgotpsw {
-      color:gray;
-    }
-  
-    footer .links a {
-      margin-left: 1rem;
-      font-size: 1rem;
-    }
+/* Footer */
+
+footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+}
+
+.forgotpsw {
+    color: gray;
+}
+
+footer .links a {
+    margin-left: 1rem;
+    font-size: 1rem;
+}
