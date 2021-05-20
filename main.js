@@ -272,15 +272,14 @@ fetchTodolist.addEventListener('click', async(e) => {
         <button class='button edit'>EDIT</button>
         <button class='button delete'>DELETE</button>
         <hr>
-
         </div>
         */
 
 
         displayhtml = displayhtml + `
             <section class="todos-container d-inline-flex" data-cards>
-            <div class="todo" style="border-color: #42d0e6;">
-            <div class="todo-tag" style="background-color: rgba(217, 246, 250, 0.5); color: black;">
+            <div class="todo">
+            <div class="todo-tag">
             TO-DO List
             </div>
             <h1 <class="card-title">No.${i.id}</h1>
@@ -291,15 +290,29 @@ fetchTodolist.addEventListener('click', async(e) => {
             <p class="card-text ">${i.status}</p>
             <div class="todo-actions">
             <BR>
-            <i class="far fa-edit" 'button edit' click="edit(${i})"></i>
-             <i class="far fa-trash-alt click="edit(${i})""></i>
+            <span id="edit-${i.id}"><i class="far fa-edit" onClick="editCard(${i.id})"></i></span>
+            <span id="delete-${i.id}"><i class="far fa-trash-alt" onClick="deleteCard(${i.id})"></i></span>
             </div>
-             </div>
-              </section>                                           
+            </div>
+            </section>                                           
             `
     }
+    displayhtml = displayhtml + "<script src=.'/loadDelFunction.js'></script>";
     displayArea.innerHTML = displayhtml;
-
-
-
+    console.log("datae: " + document.querySelector("#delete-1"))
 })
+
+const deleteCard = (indexNumber) => {
+    fetch('http://localhost:8080/todolist/' + indexNumber, {
+        method: "DELETE",
+        // headers: "",
+        // body: JSON.stringify(i.id)
+    })
+    console.log(indexNumber)
+}
+
+var newScript = document.createElement("script");
+newScript.src = "./loadDelFunction.js";
+fetchTodolist.appendChild(newScript);
+
+window.addEventListener('load', render);

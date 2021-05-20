@@ -31,7 +31,7 @@
 
                             <div class="d-flex">
                                 <form method="GET" action="main.html">
-                                    <ul><button type="submit" class="home"><b><img src="images/homelogo.png" style="height: 2.5rem;" alt="logo"></b></button></ul>
+                                    <ul><button type="submit" class="home"><b><img src="resources/images/homelogo.png" style="height: 2.5rem;" alt="logo"></b></button></ul>
                                 </form>
                                 <div class="text-uppercase d-md-inline-flex fs-2"><span> Task Manager</span></div>
                             </div>
@@ -43,7 +43,7 @@
                             <br><br><br>
                             <div class="flex-shrink-0 dropdown">
                                 <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle user-p" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="images/user.jpg" alt="md" width="100" height="100" class="rounded-circle">
+                                    <img src="resources/images/user.jpg" alt="md" width="100" height="100" class="rounded-circle">
                                 </a>
                                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="width: 100px;">
                                     <li><a class="fa fa-info-circle dropdown-item" href="#"> About</a></li>
@@ -75,13 +75,11 @@
                                     <li class="sidebar-item active" data-category-id="">View All</li>
                                     <li class="sidebar-item " data-category-id="1621125808512">Works<input class="sidebar-color" type="color" value="#45f7f4"></li>
                                     <li class="sidebar-item " data-category-id="1621137879184">Bills<input class="sidebar-color" type="color" value="#4bd8f2"></li>
-
                                 </ul>
-                            </aside>*
-
-                            <form method="GET" action="login.html">
-                                <ul><button type="submit" class="fa fa-power-off log-out"><b> Log Out</b></button></ul>
-                            </form>
+                                <form method="GET" action="login.html">
+                                    <ul><button type="submit" class="fa fa-power-off log-out"><b> Log Out</b></button></ul>
+                                </form>
+                            </aside>
                         </div>
                     </div>
                 </div>
@@ -107,8 +105,7 @@
                         <input type="text" data-new-todo-input placeholder="Enter Description" required>
                     </div>
                     <button class="btn btn-primary">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Add Task
-                    </button>
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add Task</button>
                     <button class='btn btn-primary' id='showTodolist'>Show To Do List</button>
                 </form>
 
@@ -130,20 +127,20 @@
 
             <!-- Cards -->
             <section data-cards>
-                <div class="todo" style="border-color: black;">
-                    <div class="todo-tag" style="background-color:#42d0e6; color: black;">
+                <div class="todo">
+                    <div class="todo-tag">
                         Works
                     </div>
-                    <div class="todo-tag" style="background-color:#42d0e6; color: black;">
+                    <div class="todo-tag">
                         Bills
                     </div>
-                    <div class="todo-tag" style="background-color:#42d0e6; color: black;">
+                    <div class="todo-tag">
                         Meetings
                     </div>
-                    <div class="todo-tag" style="background-color:#42d0e6; color: black;">
+                    <div class="todo-tag">
                         Others
                     </div>
-                    <div class="todo-tag" style="background-color:#42d0e6; color: black;">
+                    <div class="todo-tag">
                         Memos
                     </div>
                     <!--<p class="description">
@@ -152,16 +149,11 @@
                     <div class="todo-actions">
                         <i class="far fa-edit"></i>
                         <i class="far fa-trash-alt"></i>-->
-
-
-
                 </div>
     </div>
     </section>
     </main>
     </div>
-
-
     <div id='fetch-area'>
     </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->

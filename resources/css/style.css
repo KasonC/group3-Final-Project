@@ -17,7 +17,7 @@ body {
 
 footer {
     padding: 1rem 1.5rem;
-    position: relative;
+    /* position: relative; */
     top: 4rem;
     display: flex;
     flex-direction: row;
@@ -135,8 +135,8 @@ img.avatar {
 
 .container {
     color: tomato;
-    padding: 40px;
-    width: 400px;
+    /* padding: 40px; */
+    /* width: 400px; */
     max-width: 400px;
     margin: 1rem;
     padding: 2rem;
