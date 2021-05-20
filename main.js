@@ -207,8 +207,8 @@ function renderTodos() {
         const { color, category } = categories.find(({ _id }) => _id === categoryId);
         const backgroundColor = convertHexToRGBA(color, 20);
         todosContainer.innerHTML += `
-			<div class="todo" style="border-color: ${color}">
-					<div class="todo-tag" style="background-color: ${backgroundColor}; color: ${color};">
+			<div class="todo">
+					<div class="todo-tag">
 						${category}
 					</div>
 					<p class="description">${todo}</p>
@@ -257,7 +257,8 @@ fetchTodolist.addEventListener('click', async(e) => {
     const data = await fetch('http://localhost:8080/todolist')
     const jsonResponse = await data.json()
     let displayArea = document.querySelector('#fetch-area')
-    let displayhtml = `<div>ID, Name, Description, Assigned to, Due Date, Status</div>`
+        // let displayhtml = `<div>ID, Name, Description, Assigned to, Due Date, Status</div>`
+    let displayhtml = ``
     for (let i of jsonResponse) {
 
         /*

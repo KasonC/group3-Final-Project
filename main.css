@@ -2,9 +2,10 @@
 
 /* change the background color */
 
-.navbar-custom {
+
+/* .navbar-custom {
     background-color: #ffffff;
-}
+} */
 
 
 /* change the brand and text color */
@@ -35,7 +36,7 @@
 
  :root {
     --primary-color: #ff8351;
-    --light-color: #ffffff;
+    /* --light-color: #ffffff; */
     --success-color: #5cb85c;
     --error-color: #D9534F;
 }
@@ -53,9 +54,9 @@ html {
 body {
     background-color: #ffffff;
     background-image: url(https://media.istockphoto.com/vectors/abstract-colorful-geometrical-background-vector-id1159204285?k=6&m=1159204285&s=612x612&w=0&h=bqlCr1nGqoqvuBLy6VZ811Czh1LonVSVsoRSCqfRo_Q=);
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     font-family: "Lato", sans-serif;
-    line-height: 2;
+    /* line-height: 2; */
     padding: 35px;
     /*height: 100vh;*/
 }
@@ -75,7 +76,7 @@ body {
 /* Utilities */
 
 .btn {
-    background-color: var(--primary-color);
+    background-color: #ffc10773;
     color: var(--light-color);
     display: inline-block;
     padding: 12.50px 30px;
@@ -89,7 +90,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: #ffffff00;
     color: var(--light-color);
 }
 
@@ -97,7 +98,7 @@ body {
 /* Header */
 
 .header {
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     padding: 1.6rem;
     position: sticky;
     top: 0;
@@ -255,7 +256,6 @@ body {
 }*/
 
 .todo {
-    /*background-color: #fff;*/
     color: var(--primary-color);
     border-top: 6px solid;
     border-radius: 10px;
@@ -304,6 +304,7 @@ body {
 
 .offcanvas-body {
     width: 250px;
+    background-image: url(https://media.istockphoto.com/vectors/abstract-colorful-geometrical-background-vector-id1159204285?k=6&m=1159204285&s=612x612&w=0&h=bqlCr1nGqoqvuBLy6VZ811Czh1LonVSVsoRSCqfRo_Q=);
     /* background: #f8f8ff; */
     /* min-height: 100vh; */
     transition: 500ms width;
