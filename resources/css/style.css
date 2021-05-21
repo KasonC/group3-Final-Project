@@ -10,9 +10,9 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    /* height: 100vh; */
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: space-evenly;
 }
 
 footer {
@@ -52,7 +52,7 @@ footer {
     margin-left: 40px;
     margin-bottom: 60px;
     color: gray;
-    text-align: center;
+    /* text-align: center; */
 }
 
 
