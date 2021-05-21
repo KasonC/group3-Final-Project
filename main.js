@@ -13,7 +13,6 @@ const newTodoForm = document.querySelector('[data-new-todo-form]');
 const newTodoSelect = document.querySelector('[data-new-todo-select]');
 const newTodoInput = document.querySelector('[data-new-todo-input]');
 
-
 // Selector for edit todo form
 const editTodoForm = document.querySelector('[data-edit-todo-form]');
 const editTodoSelect = document.querySelector('[data-edit-todo-select]');
@@ -89,8 +88,52 @@ currentlyViewing.addEventListener('click', (e) => {
 });
 
 // EVENT: Add Todo
-newTodoForm.addEventListener('submit', (e) => {
+newTodoForm.addEventListener('submit', async(e) => {
     e.preventDefault();
+
+    // get data from form / dom
+
+    let formData = new FormData(document.querySelector('.create-todo-form'))
+
+    console.log(formData)
+
+    var object = {};
+    formData.forEach(function(value, key) {
+        object[key] = value;
+    });
+
+    let data = {
+        "id": "8",
+        "name": "Fa jer",
+        "description": "Singing contest",
+        "assignedto": "Anson Loo",
+        "duedate": "29/5/2021",
+        "status": "Pending"
+    }
+
+    const response = await fetch("http://localhost:8080/todolist/", {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        //mode: 'cors', // no-cors, *cors, same-origin
+        //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        //credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+            'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        //redirect: 'follow', // manual, *follow, error
+        //referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: JSON.stringify(object) // body data type must match "Content-Type" header
+    });
+
+    const json = await response.json()
+
+    console.log(json)
+
+
+    refresh()
+
+    return
+
     todos.push({
         _id: Date.now().toString(),
         categoryId: newTodoSelect.value,
@@ -300,20 +343,77 @@ fetchTodolist.addEventListener('click', async(e) => {
     }
     displayhtml = displayhtml + "<script src=.'/loadDelFunction.js'></script>";
     displayArea.innerHTML = displayhtml;
-    console.log("datae: " + document.querySelector("#delete-1"))
+    console.log("data: " + document.querySelector("#delete-1"))
 })
 
-const deleteCard = (indexNumber) => {
-    fetch('http://localhost:8080/todolist/' + indexNumber, {
+const refresh = async() => {
+    const data = await fetch('http://localhost:8080/todolist')
+    const jsonResponse = await data.json()
+    let displayArea = document.querySelector('#fetch-area')
+        // let displayhtml = `<div>ID, Name, Description, Assigned to, Due Date, Status</div>`
+    let displayhtml = ``
+    for (let i of jsonResponse) {
+
+        /*
+        <div>
+        <textarea id='id_${i}'>${i.id}</textarea>
+        <textarea id='name_${i}'>${i.name}</textarea>
+        <textarea id='description_${i}'>${i.description}</textarea>
+        <textarea id='assignedto_${i}'>${i.assignedto}</textarea>
+        <textarea id='duedate_${i}'>${i.duedate}</textarea>
+        <textarea id='status_${i}'>${i.status}</textarea>
+        <BR>
+        <button class='button edit'>EDIT</button>
+        <button class='button delete'>DELETE</button>
+        <hr>
+        </div>
+        */
+
+
+        displayhtml = displayhtml + `
+            <section class="todos-container d-inline-flex" data-cards>
+            <div class="todo">
+            <div class="todo-tag">
+            TO-DO List
+            </div>
+            <h1 <class="card-title">No.${i.id}</h1>
+            <p class="card-text">Task Name: ${i.name}</p>
+            <p class="card-text">Task Description: ${i.description}</p>
+            <p class="card-text">Assigned To: ${i.assignedto}</p>
+            <p class="card-text">${i.duedate}</p>
+            <p class="card-text ">${i.status}</p>
+            <div class="todo-actions">
+            <BR>
+            <span id="edit-${i.id}"><i class="far fa-edit" onClick="editCard(${i.id})"></i></span>
+            <span id="delete-${i.id}"><i class="far fa-trash-alt" onClick="deleteCard(${i.id})"></i></span>
+            </div>
+            </div>
+            </section>                                           
+            `
+    }
+    displayhtml = displayhtml + "<script src=.'/loadDelFunction.js'></script>";
+    displayArea.innerHTML = displayhtml;
+    console.log("datae: " + document.querySelector("#delete-1"))
+}
+
+
+
+const deleteCard = async(indexNumber) => {
+    const res = await fetch('http://localhost:8080/todolist/' + indexNumber, {
         method: "DELETE",
         // headers: "",
         // body: JSON.stringify(i.id)
     })
+
     console.log(indexNumber)
+
+    //const json = await res.json()
+
+    refresh()
 }
 
-var newScript = document.createElement("script");
-newScript.src = "./loadDelFunction.js";
-fetchTodolist.appendChild(newScript);
+//var newScript = document.createElement("script");
+//newScript.src = "./loadDelFunction.js";
+//fetchTodolist.appendChild(newScript);
 
 window.addEventListener('load', render);

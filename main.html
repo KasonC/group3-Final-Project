@@ -102,10 +102,17 @@
 
 
                     <div class="form-control">
-                        <input type="text" data-new-todo-input placeholder="Enter Description" required>
+
+                        <input type="text" name="id" placeholder="ID" required>
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="description" placeholder="Description" required>
+                        <input type="text" name="assignedto" placeholder="Assigned To" required>
+                        <input type="text" name="duedate" placeholder="Duedate" required>
+                        <input type="text" name="status" placeholder="Status" required>
+
                     </div>
                     <button class="btn btn-primary">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Add Task</button>
+                        <i class="fa fa-plus" aria-hidden="true" type="submit"></i> Add Task</button>
                     <button class='btn btn-primary' id='showTodolist'>Show To Do List</button>
                 </form>
 
