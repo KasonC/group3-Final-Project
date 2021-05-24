@@ -54,11 +54,13 @@ html {
 body {
     background-color: #ffffff;
     background-image: url(https://media.istockphoto.com/vectors/abstract-colorful-geometrical-background-vector-id1159204285?k=6&m=1159204285&s=612x612&w=0&h=bqlCr1nGqoqvuBLy6VZ811Czh1LonVSVsoRSCqfRo_Q=);
-    /* color: var(--primary-color); */
+    /*color: var(--primary-color); */
     font-family: "Lato", sans-serif;
     /* line-height: 2; */
     padding: 35px;
     /*height: 100vh;*/
+    background-repeat: no-repeat;
+    background-size: 100% 200%;
 }
 
 
