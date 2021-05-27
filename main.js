@@ -324,10 +324,10 @@ fetchTodolist.addEventListener('click', async(e) => {
             <section class="todos-container d-inline-flex" data-cards>
             <div class="todo">
             <div class="todo-tag">
-            TO-DO List${i.id}
+            TO-DO List
             </div>
-            <h1 <class="card-title">No.${i.id}</h1>
-            <p class="card-text">Task Name: ${i.name}</p>
+            <h1 <class="card-title">${i.id}</h1>
+            <p class="card-text">Name: ${i.name}</p>
             <p class="card-text">Task Description: ${i.description}</p>
             <p class="card-text">Assigned To: ${i.assignedto}</p>
             <p class="card-text">${i.duedate}</p>
@@ -354,30 +354,14 @@ const refresh = async() => {
     let displayhtml = ``
     for (let i of jsonResponse) {
 
-        /*
-        <div>
-        <textarea id='id_${i}'>${i.id}</textarea>
-        <textarea id='name_${i}'>${i.name}</textarea>
-        <textarea id='description_${i}'>${i.description}</textarea>
-        <textarea id='assignedto_${i}'>${i.assignedto}</textarea>
-        <textarea id='duedate_${i}'>${i.duedate}</textarea>
-        <textarea id='status_${i}'>${i.status}</textarea>
-        <BR>
-        <button class='button edit'>EDIT</button>
-        <button class='button delete'>DELETE</button>
-        <hr>
-        </div>
-        */
-
-
         displayhtml = displayhtml + `
             <section class="todos-container d-inline-flex" data-cards>
             <div class="todo">
             <div class="todo-tag">
             TO-DO List
             </div>
-            <h1 <class="card-title">No.${i.id}</h1>
-            <p class="card-text">Task Name: ${i.name}</p>
+            <h1 <class="card-title">${i.id}</h1>
+            <p class="card-text">Name: ${i.name}</p>
             <p class="card-text">Task Description: ${i.description}</p>
             <p class="card-text">Assigned To: ${i.assignedto}</p>
             <p class="card-text">${i.duedate}</p>

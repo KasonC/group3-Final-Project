@@ -103,12 +103,76 @@
 
                     <div class="form-control">
 
-                        <input type="text" name="id" placeholder="ID" required>
-                        <input type="text" name="name" placeholder="Name" required>
-                        <input type="text" name="description" placeholder="Description" required>
-                        <input type="text" name="assignedto" placeholder="Assigned To" required>
-                        <input type="text" name="duedate" placeholder="Duedate" required>
-                        <input type="text" name="status" placeholder="Status" required>
+
+                        <input type="text" name="id" placeholder="Task No." required>
+                        <!-- <input type="text" name="name" placeholder="Name" required> -->
+
+                        <p class="text"><label for="name">Name:</label><select name="name">
+                            <option value></option>
+                            <option value="Alan">Alan</option>
+                            <option value="Clayton">Clayton</option>
+                            <option value="Cherry">Cherry</option>
+                            <option value="David">David</option>
+                            <option value="Esmeralda">Esmeralda</option>
+                            <option value="Elva">Elva</option>
+                            <option value="Hoi">Hoi</option>
+                            <option value="Hanson">Hanson</option>
+                            <option value="Kenny">Kenny</option>
+                            <option value="Katherine">Katherine</option>
+                            <option value="kason">kason</option>
+                            <option value="Kevin">Kevin</option>
+                            <option value="Mary">Mary</option>
+                            <option value="Peter">Peter</option>
+                            <option value="Roy">Roy</option>
+                            <option value="Roxanne">Roxanne</option>
+                            <option value="Sam">Sam</option>
+                            <option value="Salin">Salin</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Tony">Tony</option>
+                            <option value="Victor">Victor</option>
+                            <option value="Yoyo">Yoyo</option>
+                          </select></p>
+
+                        <input type="text" name="description" placeholder="Task Description" required>
+                        <!--<input type="text" name="assignedto" placeholder="Assigned To" required>-->
+
+                        <p class="text"><label for="assignedto">Assigned To:</label><select name="assignedto">
+                            <option value></option>
+                            <option value="Alan">Alan</option>
+                            <option value="Clayton">Clayton</option>
+                            <option value="Cherry">Cherry</option>
+                            <option value="David">David</option>
+                            <option value="Esmeralda">Esmeralda</option>
+                            <option value="Elva">Elva</option>
+                            <option value="Hoi">Hoi</option>
+                            <option value="Hanson">Hanson</option>
+                            <option value="Kenny">Kenny</option>
+                            <option value="Katherine">Katherine</option>
+                            <option value="kason">kason</option>
+                            <option value="Kevin">Kevin</option>
+                            <option value="Mary">Mary</option>
+                            <option value="Peter">Peter</option>
+                            <option value="Roy">Roy</option>
+                            <option value="Roxanne">Roxanne</option>
+                            <option value="Sam">Sam</option>
+                            <option value="Salin">Salin</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Tony">Tony</option>
+                            <option value="Victor">Victor</option>
+                            <option value="Yoyo">Yoyo</option>
+                          </select></p>
+
+                        <!--<input type="text" name="duedate" placeholder="Duedate" required>-->
+                        <p class="text"><label for="duedate">Duedate</label><input type='date' name="duedate"></p>
+
+
+                        <!--<input type="text" name="status" placeholder="Status: Todo/In Progerss/Review/Done" required>-->
+                        <p type="card-text "><label for="status">Status:</label><select name="status">
+                            <option value="TODO">Todo</option>
+                            <option value="IN PROGERSS">In Progress</option>
+                            <option value="REVIEW">Review</option>
+                            <option value="DONE">Done</option>
+                         </select></p>
 
                     </div>
                     <button class="btn btn-primary">
